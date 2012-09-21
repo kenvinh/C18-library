@@ -84,10 +84,10 @@ void main(void)
 {
     unsigned char count;
     ADCON1bits.PCFG = 0x0F; //All analog pin are digital
-    TRISB = 0x01; //RB0 input, RB1 output
+    TRISA = 0x00;
+	TRISB = 0x01; //RB0 input, RB1 output
     TRISC = 0x04; //RC0,RC1,RC7 output. RC2 input
     TRISD = 0x00; //PORTD output bit for testing
-    TRISA = 0x00;
     TRISE = 0x00;
     
     SSPSTAT = 0xC0; //Sample at the end, transmit on falling edge
